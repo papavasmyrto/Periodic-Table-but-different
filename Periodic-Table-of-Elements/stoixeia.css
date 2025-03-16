@@ -21,7 +21,9 @@ header {
 .heading a {
     text-decoration: none;
 }
-
+.plhroforia {
+    color:#bd1275;
+}
 .logo-text {
     font-size: 35px;
     font-weight: bold;
@@ -91,6 +93,14 @@ header {
     top: 0;
     padding: 2px;
     color: #ffffff;
+    font-size: 000%;
+}
+.element .atomic-number-info {
+    position: absolute;
+    left: 15%;
+    top: 0;
+    padding: 2px;
+    color: #ffffff;
     font-size: 400%;
 }
 
@@ -105,10 +115,15 @@ header {
 }
 
 .element .name {
-    font-size: 500%;
+    font-size: 400%;
     color: #ffffff;
 }
-
+.element .name-info {
+    font-size: 700%;
+    color: #ffffff;
+    padding-top: 170%;
+    height: 50px;
+}
 .element .atomic-weight {
     position: absolute;
     top: 60%;
@@ -120,7 +135,7 @@ header {
     text-align: center;
     opacity: 1;
     color: #ffffff;
-    font-size: 280%;
+    font-size: 0%;
 }
 
 
@@ -135,9 +150,20 @@ header {
     opacity: 1;
     text-align: right;
     color: #ffffff;
-    font-size: 250%;
+    font-size: 0%;
 }
-
+.domh-hl {
+    font-size: 350%;
+    color: #ffffff;
+    padding-top: 35%;
+    height: 50px;
+}
+.atom-varos {
+    font-size: 400%;
+    color: #ffffff;
+    padding-top: 120%;
+    height: 50px;
+}
 .element input[type=radio] {
     -webkit-appearance: none;
     position: absolute;
@@ -461,4 +487,32 @@ header {
     font-size: 14px;
     margin: 0;
     color: #ffffff;
+}
+
+.info-box {
+    display: flex;
+    border: 1px transparent
+    border-radius: 5px;
+    overflow: hidden;
+    width: 98%; /* Set the width of the box */
+    margin: 20px;
+}
+.info-box img {
+    width: 20%; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+.info-text {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+    color: white;
+}
+.info-text ul {
+    list-style-type: disc; /* Use bullet points */
+    margin: 0; /* Remove default margin */
+    padding-left: 20px; /* Indent the bullet points */
+}
+.info-text li {
+    padding-bottom: 1%;
 }

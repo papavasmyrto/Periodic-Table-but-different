@@ -61,44 +61,40 @@
           </div>
         </div>
       </div>
-      <div class="element transition-metal c7 ar2" data-stoixeio="Manganese">
+      <div class="element plhroforia c7 ar2" data-stoixeio="Manganese">
         <div class="square">
-            <div class="atomic-number">25</div>
+            <div class="atomic-number-info">Ατομικός Αριθμός</div>
             <div class="label">
-            <div class="symbol">Mn</div>
-            <div class="name">Manganese</div>
-            </div>
-            <div class="atomic-mass">54.938</div>
-            <div class="atomic-weight">
-            <p>[Ar] 3d<sup>5</sup>4s<sup>2</sup></p>
+            <div class="name-info">28</div>
             </div>
         </div></div>
-        <div class="element pram80 c7 ar3" data-stoixeio="Manganese">
+        <div class="element plhroforia c7 ar3" data-stoixeio="Manganese">
           <div class="square">
-              <div class="atomic-number">25</div>
+              <div class="atomic-number-info">Ηλεκτρον. δομή</div>
               <div class="label">
-              <div class="symbol">Mn</div>
-              <div class="name">Manganese</div>
-              </div>
-              <div class="atomic-mass">54.938</div>
-              <div class="atomic-weight">
-              <p>[Ar] 3d<sup>5</sup>4s<sup>2</sup></p>
+              <div class="domh-hl">28</div>
               </div>
           </div></div>
-          <div class="element pram80 c7 ar4" data-stoixeio="Manganese">
+          <div class="element plhroforia c7 ar4" data-stoixeio="Manganese">
             <div class="square">
-                <div class="atomic-number">25</div>
+                <div class="atomic-number-info">Ατομική Μάζα</div>
                 <div class="label">
-                <div class="symbol">Mn</div>
-                <div class="name">Manganese</div>
-                </div>
-                <div class="atomic-mass">54.938</div>
-                <div class="atomic-weight">
-                <p>[Ar] 3d<sup>5</sup>4s<sup>2</sup></p>
+                <div class="atom-varos">28</div>
                 </div>
             </div></div>
     </div>
   </div>
+  <div class="info-box">
+    <img src="./img/hydrogen.jpg" alt="Hydrogen Atom">
+    <div class="info-text">
+        <h3>Υδρογόνο</h3>
+        <ul>
+            <li>Το υδρογόνο είναι το πιο ελαφρύ και άφθονο στοιχείο στο σύμπαν. Είναι το πρώτο στοιχείο στον περιοδικό πίνακα και έχει χημικό σύμβολο H. Το υδρογόνο παίζει σημαντικό ρόλο στη διαδικασία της πυρηνικής σύντηξης στον ήλιο.</li>
+            <li>Το υδρογόνο βρίσκεται κυρίως στα αστέρια, συμπεριλαμβανομένου του ήλιου, όπου συμμετέχει στη διαδικασία της πυρηνικής σύντηξης. Επίσης, είναι παρόν σε πολλές ενώσεις, όπως το νερό (H₂O) και οι οργανικές ενώσεις.</li>
+            <li>Το υδρογόνο ανακαλύφθηκε το 1766 από τον Άγγλο χημικό Χένρι Καβεντίς, ο οποίος το ονόμασε "φλογερό αέριο". Αργότερα, το 1783, ο Γάλλος επιστήμονας Αντουάν Λαβοαζιέ το ονόμασε "υδρογόνο", που σημαίνει "γεννήτορας νερού".</li>
+        </ul>
+    </div>
+</div>
 
   <footer class="footer">
     <div class="container">
@@ -109,7 +105,7 @@
         <a href="https://www.instagram.com/likitha_khatri" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
       <hr align="center" width="100%" color="white">
-      <p class="footer-text">Made By Likitha Khatri</p>
+      <p class="footer-text">Zosimaia Sxolh</p>
     </div>
   </footer>
 
@@ -122,7 +118,13 @@
       const epilegmeno = elementDiv.getAttribute("data-stoixeio");
       window.open("https://en.wikipedia.org/wiki/" + epilegmeno, "_blank");
       });
-    
+      var nameinfo_pramanto = document.querySelector('.atomic-number').innerHTML;
+      if (getNumberLength(nameinfo_pramanto) == 1) {
+        nameinfo_pramanto = "0" + parseInt(nameinfo_pramanto)
+      }
+      document.querySelector('.name-info').innerHTML = nameinfo_pramanto;
+      document.querySelector('.domh-hl').innerHTML = document.querySelector('.atomic-weight').innerHTML;
+      document.querySelector('.atom-varos').innerHTML = document.querySelector('.atomic-mass').innerHTML;
   </script>
 
 </body>
