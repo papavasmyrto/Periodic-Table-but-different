@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Periodic Table of Elements</title>
+  <link rel="stylesheet" href="stoixeia.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="stoixeo.js"></script>
+</head>
+
+<body>
+
+
+  <!-- navigation -->
+
+
+  <header>
+    <div class="heading">
+      <a href="index.html">
+        <span class="logo-text">Periodic Table of Elements</span>
+      </a>
+    </div>
+  </header>
+
+
+
+
+  <div class="main">
+    <input class="category-toggle" type="radio" id="alkali-metals" name="categories" />
+    <input class="category-cancel" type="radio" id="cancel" name="categories" />
+    <input class="category-toggle" type="radio" id="alkaline-earth-metals" name="categories" />
+    <input class="category-cancel" type="radio" id="cancel" name="categories" />
+    <input class="category-toggle" type="radio" id="transition-metals" name="categories" />
+    <input class="category-cancel" type="radio" id="cancel" name="categories" />
+    <input class="category-toggle" type="radio" id="lanthanoids" name="categories" />
+    <input class="category-cancel" type="radio" id="cancel" name="categories" />
+    <input class="category-toggle" type="radio" id="actinoids" name="categories" />
+    <input class="category-cancel" type="radio" id="cancel" name="categories" />
+    <input class="category-toggle" type="radio" id="post-transition-metals" name="categories" />
+    <input class="category-cancel" type="radio" id="cancel" name="categories" />
+    <input class="category-toggle" type="radio" id="metalloids" name="categories" />
+    <input class="category-cancel" type="radio" id="cancel" name="categories" />
+    <input class="category-toggle" type="radio" id="other-nonmetals" name="categories" />
+    <input class="category-cancel" type="radio" id="cancel" name="categories" />
+    <input class="category-toggle" type="radio" id="noble-gasses" name="categories" />
+    <input class="category-cancel" type="radio" id="cancel" name="categories" />
+    <input class="category-toggle" type="radio" id="unknown" name="categories" />
+    <input class="category-cancel" type="radio" id="cancel" name="categories" />
+    <div class="periodic-table">
+      <div class="element other-nonmetal c1 r1" data-stoixeio="Hydrogen">
+        <div class="square">
+          <div class="atomic-number">1</div>
+          <div class="label">
+            <div class="symbol">H</div>
+            <div class="name">Hydrogen</div>
+          </div>
+          <div class="atomic-mass">1.008</div>
+          <div class="atomic-weight">
+            <p>1s<sup>1</sup></p>
+          </div>
+        </div>
+      </div>
+      <div class="element transition-metal c7 ar2" data-stoixeio="Manganese">
+        <div class="square">
+            <div class="atomic-number">25</div>
+            <div class="label">
+            <div class="symbol">Mn</div>
+            <div class="name">Manganese</div>
+            </div>
+            <div class="atomic-mass">54.938</div>
+            <div class="atomic-weight">
+            <p>[Ar] 3d<sup>5</sup>4s<sup>2</sup></p>
+            </div>
+        </div></div>
+        <div class="element pram80 c7 ar3" data-stoixeio="Manganese">
+          <div class="square">
+              <div class="atomic-number">25</div>
+              <div class="label">
+              <div class="symbol">Mn</div>
+              <div class="name">Manganese</div>
+              </div>
+              <div class="atomic-mass">54.938</div>
+              <div class="atomic-weight">
+              <p>[Ar] 3d<sup>5</sup>4s<sup>2</sup></p>
+              </div>
+          </div></div>
+          <div class="element pram80 c7 ar4" data-stoixeio="Manganese">
+            <div class="square">
+                <div class="atomic-number">25</div>
+                <div class="label">
+                <div class="symbol">Mn</div>
+                <div class="name">Manganese</div>
+                </div>
+                <div class="atomic-mass">54.938</div>
+                <div class="atomic-weight">
+                <p>[Ar] 3d<sup>5</sup>4s<sup>2</sup></p>
+                </div>
+            </div></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <a href="index.html" class="footer-logo">Periodic Table of Elements</a>
+      <div class="social-icon">
+        <a href="https://www.linkedin.com/in/likithakhatri" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/likitha173" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/likitha_khatri" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <hr align="center" width="100%" color="white">
+      <p class="footer-text">Made By Likitha Khatri</p>
+    </div>
+  </footer>
+
+  <script>
+    const elementDiv = document.querySelector(".element");
+    elementDiv.setAttribute("data-stoixeio", 
+  new URLSearchParams(window.location.search).get('elem'));
+    elementDiv.outerHTML=(dosekod(getAtomicNumber(elementDiv.getAttribute("data-stoixeio"))));
+    elementDiv.addEventListener("click", () => {
+      const epilegmeno = elementDiv.getAttribute("data-stoixeio");
+      window.open("https://en.wikipedia.org/wiki/" + epilegmeno, "_blank");
+      });
+    
+  </script>
+
+</body>
+
+</html>
