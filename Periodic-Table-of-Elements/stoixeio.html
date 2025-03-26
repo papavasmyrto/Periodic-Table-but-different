@@ -85,10 +85,10 @@
     </div>
   </div>
   <div class="info-box">
-    <img src="./img/hydrogen.jpg" alt="Hydrogen Atom">
+    <img src="./img/hydrogen.jpg" alt="" class="eikona">
     <div class="info-text">
-        <h3>Υδρογόνο</h3>
-        <ul>
+        <h3 class="stoixeioonoma">Υδρογόνο</h3>
+        <ul class="stoixeiotext">
             <li>Το υδρογόνο είναι το πιο ελαφρύ και άφθονο στοιχείο στο σύμπαν. Είναι το πρώτο στοιχείο στον περιοδικό πίνακα και έχει χημικό σύμβολο H. Το υδρογόνο παίζει σημαντικό ρόλο στη διαδικασία της πυρηνικής σύντηξης στον ήλιο.</li>
             <li>Το υδρογόνο βρίσκεται κυρίως στα αστέρια, συμπεριλαμβανομένου του ήλιου, όπου συμμετέχει στη διαδικασία της πυρηνικής σύντηξης. Επίσης, είναι παρόν σε πολλές ενώσεις, όπως το νερό (H₂O) και οι οργανικές ενώσεις.</li>
             <li>Το υδρογόνο ανακαλύφθηκε το 1766 από τον Άγγλο χημικό Χένρι Καβεντίς, ο οποίος το ονόμασε "φλογερό αέριο". Αργότερα, το 1783, ο Γάλλος επιστήμονας Αντουάν Λαβοαζιέ το ονόμασε "υδρογόνο", που σημαίνει "γεννήτορας νερού".</li>
@@ -99,11 +99,11 @@
   <footer class="footer">
     <div class="container">
       <a href="index.html" class="footer-logo">Periodic Table of Elements</a>
-      <div class="social-icon">
+      <!--<div class="social-icon">
         <a href="https://www.linkedin.com/in/likithakhatri" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/likitha173" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.instagram.com/likitha_khatri" target="_blank"><i class="fab fa-instagram"></i></a>
-      </div>
+      </div>-->
       <hr align="center" width="100%" color="white">
       <p class="footer-text">Zosimaia Sxolh</p>
     </div>
@@ -125,6 +125,9 @@
       document.querySelector('.name-info').innerHTML = nameinfo_pramanto;
       document.querySelector('.domh-hl').innerHTML = document.querySelector('.atomic-weight').innerHTML;
       document.querySelector('.atom-varos').innerHTML = document.querySelector('.atomic-mass').innerHTML;
+      document.querySelector('.stoixeiotext').innerHTML = makestoixeioplhr(elementDiv.getAttribute("data-stoixeio"), 0)
+      document.querySelector('.stoixeioonoma').innerHTML = makestoixeioplhr(elementDiv.getAttribute("data-stoixeio"), 1)
+      document.querySelector(".eikona").src="./img/" + elementDiv.getAttribute("data-stoixeio") + ".jpg";
   </script>
 
 </body>
