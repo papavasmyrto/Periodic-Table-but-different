@@ -127,7 +127,7 @@
       document.querySelector('.atom-varos').innerHTML = document.querySelector('.atomic-mass').innerHTML;
       document.querySelector('.stoixeiotext').innerHTML = makestoixeioplhr(elementDiv.getAttribute("data-stoixeio"), 0)
       document.querySelector('.stoixeioonoma').innerHTML = makestoixeioplhr(elementDiv.getAttribute("data-stoixeio"), 1)
-      document.querySelector(".eikona").src="./img/" + elementDiv.getAttribute("data-stoixeio") + ".jpg";
+      document.querySelector(".eikona").src="./img/" + elementDiv.getAttribute("data-stoixeio").toLowerCase() + ".jpg";
   </script>
 
 </body>
