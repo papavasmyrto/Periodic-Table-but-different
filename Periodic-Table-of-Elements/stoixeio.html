@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="stoixeia.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="stoixeo.js"></script>
+  <script src="plhrofories.js"></script>
 </head>
 
 <body>
@@ -82,10 +83,13 @@
                 <div class="atom-varos">28</div>
                 </div>
             </div></div>
+        <div class="elementeik plhroforia c7 ar6" data-stoixeio="eikona">
+          <img src="./img/hydrogen.jpg" alt="" class="eikona">  </div>
     </div>
+</div>
   </div>
   <div class="info-box">
-    <img src="./img/hydrogen.jpg" alt="" class="eikona">
+    <video src="./vidim2/guy talking with monkey.mp4" alt="" class="eikonaparga" controls> </video>
     <div class="info-text">
         <h3 class="stoixeioonoma">Υδρογόνο</h3>
         <ul class="stoixeiotext">
@@ -105,7 +109,7 @@
         <a href="https://www.instagram.com/likitha_khatri" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>-->
       <hr align="center" width="100%" color="white">
-      <p class="footer-text">Zosimaia Sxolh</p>
+      <p class="footer-text">Ζωσιμαία Σχολή</p>
     </div>
   </footer>
 
@@ -128,6 +132,7 @@
       document.querySelector('.stoixeiotext').innerHTML = makestoixeioplhr(elementDiv.getAttribute("data-stoixeio"), 0)
       document.querySelector('.stoixeioonoma').innerHTML = makestoixeioplhr(elementDiv.getAttribute("data-stoixeio"), 1)
       document.querySelector(".eikona").src="./img/" + elementDiv.getAttribute("data-stoixeio").toLowerCase() + ".jpg";
+//      document.querySelector(".eikonaa").src="./vidim2/" + elementDiv.getAttribute("data-stoixeio").toLowerCase() + ".jpg";
   </script>
 
 </body>

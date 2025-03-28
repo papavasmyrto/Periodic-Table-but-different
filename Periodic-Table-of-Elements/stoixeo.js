@@ -105,7 +105,7 @@ function getAtomicNumber(elementName) {
         Carbon: 6,
         Nitrogen: 7,
         Oxygen: 8,
-        Flourine: 9,
+        fluorine: 9,
         Neon: 10,
         Sodium: 11,
         Magnesium: 12,
@@ -333,12 +333,12 @@ let olomazi = `
         </div>
     </div>
     </div>
-    <div class="element other-nonmetal c17 r2" data-stoixeio="Flourine">
+    <div class="element other-nonmetal c17 r2" data-stoixeio="fluorine">
     <div class="square">
         <div class="atomic-number">9</div>
         <div class="label">
         <div class="symbol">F</div>
-        <div class="name">Flourine</div>
+        <div class="name">fluorine</div>
         </div>
         <div class="atomic-mass">18.998</div>
         <div class="atomic-weight">
@@ -1953,7 +1953,7 @@ function makestoixeioplhr(tsex, typos) {
         }
     }
     
-    if(tsex == "Flourine") {
+    if(tsex == "fluorine") {
         if(typos==0){
             return(`            <li>Το φθόριο είναι ένα αλογόνο με χημικό σύμβολο F και ατομικό αριθμό 9. Είναι το πιο ηλεκτραρνητικό στοιχείο και ένα από τα πιο δραστικά χημικά στοιχεία.</li>
                 <li>Χρησιμοποιείται στην παρασκευή τεφλόν, στα φθοριούχα προϊόντα για την προστασία των δοντιών και στην επεξεργασία εμπλουσμένου ουρανίου.</li>
@@ -2122,5 +2122,5 @@ function makestoixeioplhr(tsex, typos) {
         else{
             return("Πλουτώνιο")
         }
-    }    
+    } 
     else{return("")}}

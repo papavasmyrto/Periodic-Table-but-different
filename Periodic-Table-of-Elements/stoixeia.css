@@ -62,10 +62,18 @@ header {
 .element {
     position: relative;
     font-size: 0.5vw;
-    padding-bottom: 100%;
+    padding-bottom: 100%; 
     cursor: pointer;
     color: #fff;
     transition: 500ms;
+}
+.elementeik {
+    position: relative;
+    font-size: 0.5vw;
+    cursor: pointer;
+    color: #fff;
+    transition: 500ms;
+    border-radius: 50%;
 }
 
 .element .square {
@@ -358,6 +366,15 @@ header {
 .ar5 {
     grid-column: 5;
 }
+.ar6 {
+    grid-column: 6;
+}
+.ar7 {
+    grid-column: 7;
+}
+.ar8 {
+    grid-column: 8;
+}
 
 .key {
     position: relative;
@@ -498,6 +515,10 @@ header {
     margin: 20px;
 }
 .info-box img {
+    width: 20%; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+.info-box video{
     width: 20%; /* Set the width of the image */
     height: auto; /* Maintain aspect ratio */
 }
