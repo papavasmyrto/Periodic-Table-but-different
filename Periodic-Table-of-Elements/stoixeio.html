@@ -132,6 +132,22 @@
       document.querySelector('.stoixeiotext').innerHTML = makestoixeioplhr(elementDiv.getAttribute("data-stoixeio"), 0)
       document.querySelector('.stoixeioonoma').innerHTML = makestoixeioplhr(elementDiv.getAttribute("data-stoixeio"), 1)
       document.querySelector(".eikona").src="./img/" + elementDiv.getAttribute("data-stoixeio").toLowerCase() + ".jpg";
+      
+      fetch(window.location.origin + window.location.pathname.replace(/\/[^/]*$/, "/") + 'vidim2/' + elementDiv.getAttribute("data-stoixeio").toLowerCase() + ".mp4", { method: "HEAD" },{mode: 'no-cors'})
+        .then(response => {
+          if (response.ok) {
+            document.querySelector(".eikona").src="./img/" + elementDiv.getAttribute("data-stoixeio").toLowerCase() + ".jpg";
+            document.querySelector(".eikonaparga").src="./vidim2/" + elementDiv.getAttribute("data-stoixeio").toLowerCase() + ".mp4";
+          } else {
+            document.querySelector(".eikona").outerHTML=""
+            document.querySelector(".eikonaparga").outerHTML='<img src="./img/hydrogen.jpg" alt="" class="eikona">';
+            document.querySelector(".eikona").src="./img/" + elementDiv.getAttribute("data-stoixeio").toLowerCase() + ".jpg";
+            
+          }
+        })
+        .catch(error => {
+          console.log("Error accessing video:", error);
+        });
 //      document.querySelector(".eikonaa").src="./vidim2/" + elementDiv.getAttribute("data-stoixeio").toLowerCase() + ".jpg";
   </script>
 

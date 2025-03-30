@@ -519,7 +519,7 @@ header {
     height: auto; /* Maintain aspect ratio */
 }
 .info-box video{
-    width: 20%; /* Set the width of the image */
+    width: 25%; /* Set the width of the image */
     height: auto; /* Maintain aspect ratio */
 }
 .info-text {
@@ -528,6 +528,7 @@ header {
     flex-direction: column;
     justify-content: center; /* Center the text vertically */
     color: white;
+    font-size: x-large;
 }
 .info-text ul {
     list-style-type: disc; /* Use bullet points */
